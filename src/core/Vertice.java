@@ -5,7 +5,6 @@ public class Vertice{
     private int grau;
 
     public Vertice(String rotulo) throws Exception{
-        
         boolean isRotuloNullOrBlank= (rotulo==null || rotulo!=null && "".equals(rotulo.trim()));
         if(isRotuloNullOrBlank){
             	throw new Exception("Não é permitido a inclusão de vértices vazios com rotulo em branco");
@@ -19,6 +18,10 @@ public class Vertice{
     }
     public int getGrau(){
         return this.grau;
+    }
+    
+    public void addGrau(){
+         this.grau++;
     }
 
 }
