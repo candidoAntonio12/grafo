@@ -13,8 +13,8 @@ public class MatrizAdjacencia {
     }
 
     public  void inicializarMatriz(){
-        for(int i=0;i<=matriz.length;i++){
-            for(int j=0;j<=matriz.length;j++){
+        for(int i=0;i<=matriz.length-1;i++){
+            for(int j=0;j<=matriz.length-1;j++){
                 matriz[i][j]=0;
             }
         }
@@ -35,7 +35,7 @@ public class MatrizAdjacencia {
     }
     public List<Vertice> getAdjcencias(int indiceVertice){
         List<Vertice> vertices=new ArrayList<>();
-        for(int j=0;j<=matriz.length;j++){
+        for(int j=0;j<=matriz.length-1;j++){
             if(matriz[indiceVertice][j]==1){
                 vertices.add(this.vertices.get(j));
             }
